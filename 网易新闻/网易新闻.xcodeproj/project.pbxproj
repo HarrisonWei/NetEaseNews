@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		616F60981F32D79600B753D7 /* NetworkTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 616F60971F32D79600B753D7 /* NetworkTools.m */; };
+		616F609B1F36E08700B753D7 /* News.m in Sources */ = {isa = PBXBuildFile; fileRef = 616F609A1F36E08700B753D7 /* News.m */; };
+		616F609F1F36FC5E00B753D7 /* NSArray+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = 616F609E1F36FC5E00B753D7 /* NSArray+Log.m */; };
 		61928B821F31BBE2004AE4C6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 61928B811F31BBE2004AE4C6 /* main.m */; };
 		61928B851F31BBE2004AE4C6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 61928B841F31BBE2004AE4C6 /* AppDelegate.m */; };
 		61928B8D1F31BBE2004AE4C6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 61928B8C1F31BBE2004AE4C6 /* Assets.xcassets */; };
@@ -21,6 +23,10 @@
 		15991FA73945E49DBC2FE06F /* Pods-网易新闻.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-网易新闻.debug.xcconfig"; path = "Pods/Target Support Files/Pods-网易新闻/Pods-网易新闻.debug.xcconfig"; sourceTree = "<group>"; };
 		616F60961F32D79600B753D7 /* NetworkTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkTools.h; sourceTree = "<group>"; };
 		616F60971F32D79600B753D7 /* NetworkTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkTools.m; sourceTree = "<group>"; };
+		616F60991F36E08700B753D7 /* News.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = News.h; path = ../Tools/News.h; sourceTree = "<group>"; };
+		616F609A1F36E08700B753D7 /* News.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = News.m; path = ../Tools/News.m; sourceTree = "<group>"; };
+		616F609D1F36FC5E00B753D7 /* NSArray+Log.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Log.h"; sourceTree = "<group>"; };
+		616F609E1F36FC5E00B753D7 /* NSArray+Log.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Log.m"; sourceTree = "<group>"; };
 		61928B7D1F31BBE2004AE4C6 /* 网易新闻.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "网易新闻.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		61928B811F31BBE2004AE4C6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		61928B831F31BBE2004AE4C6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -53,6 +59,15 @@
 				91F0B688165CE24A1402E9A8 /* libPods-网易新闻.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		616F609C1F36FC4C00B753D7 /* Log */ = {
+			isa = PBXGroup;
+			children = (
+				616F609D1F36FC5E00B753D7 /* NSArray+Log.h */,
+				616F609E1F36FC5E00B753D7 /* NSArray+Log.m */,
+			);
+			name = Log;
 			sourceTree = "<group>";
 		};
 		61928B741F31BBE2004AE4C6 = {
@@ -110,6 +125,8 @@
 				61928B9A1F31BDE0004AE4C6 /* News.storyboard */,
 				61928B9C1F31BE3A004AE4C6 /* NewsTableViewController.h */,
 				61928B9D1F31BE3A004AE4C6 /* NewsTableViewController.m */,
+				616F60991F36E08700B753D7 /* News.h */,
+				616F609A1F36E08700B753D7 /* News.m */,
 			);
 			path = News;
 			sourceTree = "<group>";
@@ -117,6 +134,7 @@
 		61928B991F31BD8C004AE4C6 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				616F609C1F36FC4C00B753D7 /* Log */,
 				616F60961F32D79600B753D7 /* NetworkTools.h */,
 				616F60971F32D79600B753D7 /* NetworkTools.m */,
 			);
@@ -258,8 +276,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				616F609B1F36E08700B753D7 /* News.m in Sources */,
 				616F60981F32D79600B753D7 /* NetworkTools.m in Sources */,
 				61928B9E1F31BE3A004AE4C6 /* NewsTableViewController.m in Sources */,
+				616F609F1F36FC5E00B753D7 /* NSArray+Log.m in Sources */,
 				61928B851F31BBE2004AE4C6 /* AppDelegate.m in Sources */,
 				61928B821F31BBE2004AE4C6 /* main.m in Sources */,
 			);
