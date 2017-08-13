@@ -75,7 +75,12 @@ const char *KPopertisKey = "propertisKey";
     NSDictionary *dict = [self dictionaryWithValuesForKeys:propertis];
     return [NSString stringWithFormat:@"<%@: %p> %@",self.class,self,dict];
 }
-+ (void)loadNewsListWithURLString:(NSString *)urlString{
+//加载指定URL的新闻数组
++ (void)loadNewsListWithURLString:(NSString *)urlString finished:(void (^)(NSArray *))finished{
+    //断言
+    NSAssert(finished != nil, @"传入必须完成回调");
+    
+    
     [[NetworkTools sharedNetworkTools]GET:urlString parameters:nil success:^(NSURLSessionDataTask * _Nonnull task, NSDictionary *responseObject) {
         NSLog(@"%@",responseObject.keyEnumerator.nextObject);
         //根据key拿到第一个数组
@@ -90,12 +95,34 @@ const char *KPopertisKey = "propertisKey";
         for (NSDictionary *obj in array) {
             [arrayM addObject:[self newsWithDict:obj]];
         }
-        NSLog(@"%@",arrayM);
+        //回调,AFN的回调是在主线程
+        finished(arrayM.copy);
+        
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         NSLog(@"%@",error);
     }];
 }
 @end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

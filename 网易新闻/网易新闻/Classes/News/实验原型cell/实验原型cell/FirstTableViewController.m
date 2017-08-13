@@ -1,61 +1,55 @@
 //
-//  NewsTableViewController.m
-//  网易新闻
+//  FirstTableViewController.m
+//  实验原型cell
 //
-//  Created by 曹魏 on 2017/8/2.
+//  Created by 曹魏 on 2017/8/13.
 //  Copyright © 2017年 itcast. All rights reserved.
 //
 
-#import "NewsTableViewController.h"
-#import "News.h"
-#import "NewsCell.h"
-@interface NewsTableViewController ()
-@property (nonatomic,strong)NSArray *newsList;
+#import "FirstTableViewController.h"
+
+@interface FirstTableViewController ()
+
 @end
 
-@implementation NewsTableViewController
-//重写set方法
-- (void)setNewsList:(NSArray *)newsList{
-    _newsList = newsList;
-    
-    [self.tableView reloadData];
-}
+@implementation FirstTableViewController
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    //测试加载新闻
-    //为了避免循环引用
-    __weak typeof(self) weakSelf = self;
+    // Uncomment the following line to preserve selection between presentations.
+    // self.clearsSelectionOnViewWillAppear = NO;
     
-    [News loadNewsListWithURLString:@"T1370583240249/0-20.html" finished:^(NSArray *newsList) {
-        
-        weakSelf.newsList = newsList;
-        
-    }];
+    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
+    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    
+    // Dispose of any resources that can be recreated.
 }
 
 #pragma mark - Table view data source
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 
-    return self.newsList.count;
+
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+#warning Incomplete implementation, return the number of rows
+    return 3;
 }
 
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    static NSString *cellID = @"NewsCell";
     
-    NewsCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
     
-    cell.news = self.newsList[indexPath.row];
+    
     
     return cell;
 }
 
-
+ 
+ 
 /*
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {

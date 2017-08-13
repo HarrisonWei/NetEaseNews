@@ -15,13 +15,52 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="NewsCell" id="YRq-2J-L61">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="NewsCell" rowHeight="80" id="YRq-2J-L61" customClass="NewsCell">
+                                <rect key="frame" x="0.0" y="28" width="375" height="80"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="YRq-2J-L61" id="gKo-kD-wO5">
-                                    <frame key="frameInset" width="375" height="43"/>
+                                    <frame key="frameInset" width="375" height="79.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="whx-Bp-u9L" userLabel="配图">
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="60" id="Mnf-4N-o0m"/>
+                                                <constraint firstAttribute="width" constant="80" id="ooY-Kq-lad"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ztl-WZ-pvo" userLabel="标题">
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Itt-Bi-Hj8" userLabel="摘要">
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="37c-YF-ORq" userLabel="跟帖">
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="Itt-Bi-Hj8" firstAttribute="bottom" secondItem="whx-Bp-u9L" secondAttribute="bottom" id="18J-3I-d5T"/>
+                                        <constraint firstItem="Itt-Bi-Hj8" firstAttribute="leading" secondItem="whx-Bp-u9L" secondAttribute="trailing" constant="15" id="20G-Xv-N0E"/>
+                                        <constraint firstAttribute="bottom" secondItem="37c-YF-ORq" secondAttribute="bottom" constant="10.5" id="Aug-wQ-lL6"/>
+                                        <constraint firstItem="whx-Bp-u9L" firstAttribute="leading" secondItem="gKo-kD-wO5" secondAttribute="leading" constant="8" id="MXw-2i-bUC"/>
+                                        <constraint firstAttribute="trailing" secondItem="37c-YF-ORq" secondAttribute="trailing" constant="8" id="Yez-AB-nAa"/>
+                                        <constraint firstItem="whx-Bp-u9L" firstAttribute="centerY" secondItem="gKo-kD-wO5" secondAttribute="centerY" id="lFe-yQ-Dfk"/>
+                                        <constraint firstItem="ztl-WZ-pvo" firstAttribute="leading" secondItem="whx-Bp-u9L" secondAttribute="trailing" constant="15" id="oGK-WY-KOs"/>
+                                        <constraint firstItem="ztl-WZ-pvo" firstAttribute="top" secondItem="whx-Bp-u9L" secondAttribute="top" id="vSx-6L-9GG"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="digestLabel" destination="Itt-Bi-Hj8" id="dR9-f9-5XR"/>
+                                    <outlet property="iconView" destination="whx-Bp-u9L" id="6tv-g9-iIT"/>
+                                    <outlet property="replyLabel" destination="37c-YF-ORq" id="7q3-s5-SFr"/>
+                                    <outlet property="titleLabel" destination="ztl-WZ-pvo" id="DGq-cg-YAc"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>

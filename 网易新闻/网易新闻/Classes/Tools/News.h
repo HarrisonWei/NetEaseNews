@@ -18,11 +18,10 @@
 //配图地址
 @property (nonatomic,copy)NSString *imgsrc;
 
-@property (nonatomic,copy)NSString *haha;
-@property (nonatomic,copy)NSString *xixi;
+
 - (instancetype)initWithDict:(NSDictionary *)dict;
 + (instancetype)newsWithDict:(NSDictionary *)dict;
 
 //加载指定URL的新闻数组
-+ (void)loadNewsListWithURLString:(NSString *)urlString;
++ (void)loadNewsListWithURLString:(NSString *)urlString finished:(void(^)(NSArray *newsList))finished; 
 @end
