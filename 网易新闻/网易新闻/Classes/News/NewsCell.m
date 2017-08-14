@@ -11,7 +11,7 @@
 @interface NewsCell()
 @property (weak, nonatomic) IBOutlet UIImageView *iconView;
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
-@property (weak, nonatomic) IBOutlet UILabel *digestLabel;
+@property (weak, nonatomic) IBOutlet UILabel *sourceLabel;
 @property (weak, nonatomic) IBOutlet UILabel *replyLabel;
 
 @end
@@ -20,14 +20,16 @@
 - (void)setNews:(News *)news{
     _news = news;
     self.titleLabel.text = news.title;
-    self.digestLabel.text = news.digest;
+    self.sourceLabel.text = news.source;
     self.replyLabel.text = [NSString stringWithFormat:@"%d跟帖",news.replyCount];
     
 }
 
 - (void)awakeFromNib {
     [super awakeFromNib];
-    // Initialization code
+    
+    // 设置换行宽度
+    self.titleLabel.preferredMaxLayoutWidth = [UIScreen mainScreen].bounds.size.width - self.titleLabel.frame.origin.x - 20;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
@@ -37,3 +39,12 @@
 }
 
 @end
+
+
+
+
+
+
+
+
+

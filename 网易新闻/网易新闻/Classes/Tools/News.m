@@ -85,7 +85,7 @@ const char *KPopertisKey = "propertisKey";
         NSLog(@"%@",responseObject.keyEnumerator.nextObject);
         //根据key拿到第一个数组
         NSArray *array = responseObject[responseObject.keyEnumerator.nextObject];
-//        NSLog(@"%@",array);
+        NSLog(@"%@",array);
         //字典转模型
         //Capacity:容量  假设是10 这种创建数组的方式就会一次性分配10 存储空间
         //当添加第11个元素的时候,又会开辟10个存储空间

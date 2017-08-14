@@ -27,7 +27,7 @@
     //为了避免循环引用
     __weak typeof(self) weakSelf = self;
     
-    [News loadNewsListWithURLString:@"T1370583240249/0-20.html" finished:^(NSArray *newsList) {
+    [News loadNewsListWithURLString:@"T1348648517839/0-20.html" finished:^(NSArray *newsList) {
         
         weakSelf.newsList = newsList;
         
