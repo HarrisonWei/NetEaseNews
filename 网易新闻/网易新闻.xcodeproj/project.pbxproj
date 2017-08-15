@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		61019F021F4344AE00AB15B6 /* topic_news.json in Resources */ = {isa = PBXBuildFile; fileRef = 61019F011F4344AE00AB15B6 /* topic_news.json */; };
+		61019F051F4344DC00AB15B6 /* Channel.m in Sources */ = {isa = PBXBuildFile; fileRef = 61019F041F4344DC00AB15B6 /* Channel.m */; };
 		616F60981F32D79600B753D7 /* NetworkTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 616F60971F32D79600B753D7 /* NetworkTools.m */; };
 		616F609B1F36E08700B753D7 /* News.m in Sources */ = {isa = PBXBuildFile; fileRef = 616F609A1F36E08700B753D7 /* News.m */; };
 		616F609F1F36FC5E00B753D7 /* NSArray+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = 616F609E1F36FC5E00B753D7 /* NSArray+Log.m */; };
@@ -22,6 +24,9 @@
 
 /* Begin PBXFileReference section */
 		15991FA73945E49DBC2FE06F /* Pods-网易新闻.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-网易新闻.debug.xcconfig"; path = "Pods/Target Support Files/Pods-网易新闻/Pods-网易新闻.debug.xcconfig"; sourceTree = "<group>"; };
+		61019F011F4344AE00AB15B6 /* topic_news.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = topic_news.json; sourceTree = "<group>"; };
+		61019F031F4344DC00AB15B6 /* Channel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Channel.h; sourceTree = "<group>"; };
+		61019F041F4344DC00AB15B6 /* Channel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Channel.m; sourceTree = "<group>"; };
 		616F60961F32D79600B753D7 /* NetworkTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkTools.h; sourceTree = "<group>"; };
 		616F60971F32D79600B753D7 /* NetworkTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkTools.m; sourceTree = "<group>"; };
 		616F60991F36E08700B753D7 /* News.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = News.h; path = ../Tools/News.h; sourceTree = "<group>"; };
@@ -62,6 +67,24 @@
 				91F0B688165CE24A1402E9A8 /* libPods-网易新闻.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		61019EFF1F43447F00AB15B6 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				61019F001F43447F00AB15B6 /* Channel */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		61019F001F43447F00AB15B6 /* Channel */ = {
+			isa = PBXGroup;
+			children = (
+				61019F011F4344AE00AB15B6 /* topic_news.json */,
+				61019F031F4344DC00AB15B6 /* Channel.h */,
+				61019F041F4344DC00AB15B6 /* Channel.m */,
+			);
+			path = Channel;
 			sourceTree = "<group>";
 		};
 		616F609C1F36FC4C00B753D7 /* Log */ = {
@@ -116,6 +139,7 @@
 		61928B971F31BD8C004AE4C6 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				61019EFF1F43447F00AB15B6 /* Home */,
 				61928B981F31BD8C004AE4C6 /* News */,
 				61928B991F31BD8C004AE4C6 /* Tools */,
 			);
@@ -219,6 +243,7 @@
 			files = (
 				61928B901F31BBE2004AE4C6 /* LaunchScreen.storyboard in Resources */,
 				61928B9B1F31BDE0004AE4C6 /* News.storyboard in Resources */,
+				61019F021F4344AE00AB15B6 /* topic_news.json in Resources */,
 				61928B8D1F31BBE2004AE4C6 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -286,6 +311,7 @@
 				61928B9E1F31BE3A004AE4C6 /* NewsTableViewController.m in Sources */,
 				616F60A21F3DFAF700B753D7 /* NewsCell.m in Sources */,
 				616F609F1F36FC5E00B753D7 /* NSArray+Log.m in Sources */,
+				61019F051F4344DC00AB15B6 /* Channel.m in Sources */,
 				61928B851F31BBE2004AE4C6 /* AppDelegate.m in Sources */,
 				61928B821F31BBE2004AE4C6 /* main.m in Sources */,
 			);
