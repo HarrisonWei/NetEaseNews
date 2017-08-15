@@ -22,6 +22,16 @@
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
+    //设置预估行高
+    self.tableView.estimatedRowHeight = 125;
+//    //设置行高--自动计算行高
+//    //注意点:
+//    /*
+//     1.必须设置有向下的约束
+//     2.向下的约束不能为负值
+//    */
+    self.tableView.rowHeight = UITableViewAutomaticDimension;
+    
     
     //测试加载新闻
     //为了避免循环引用
@@ -46,16 +56,22 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    static NSString *cellID = @"NewsCell";
+    
+    News *n = self.newsList[indexPath.row];
+    
+    NSString *cellID = [NewsCell cellIdentifier:n];
     
     NewsCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID forIndexPath:indexPath];
     
-    cell.news = self.newsList[indexPath.row];
+    cell.news = n;
     
     return cell;
 }
 
-
+#pragma mark -- 状态栏隐藏
+- (BOOL)prefersStatusBarHidden{
+    return YES;
+}
 /*
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {

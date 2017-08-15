@@ -17,7 +17,10 @@
 @property (nonatomic,assign)int replyCount;
 //配图地址
 @property (nonatomic,copy)NSString *imgsrc;
-
+//多图数组
+@property (nonatomic,strong)NSArray *imgextra;
+//是否大图标记.bool默认是yes
+@property (nonatomic,assign,getter=isBigImage)BOOL imgType;
 
 - (instancetype)initWithDict:(NSDictionary *)dict;
 + (instancetype)newsWithDict:(NSDictionary *)dict;
