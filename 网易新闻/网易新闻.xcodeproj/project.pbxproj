@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		61019F021F4344AE00AB15B6 /* topic_news.json in Resources */ = {isa = PBXBuildFile; fileRef = 61019F011F4344AE00AB15B6 /* topic_news.json */; };
 		61019F051F4344DC00AB15B6 /* Channel.m in Sources */ = {isa = PBXBuildFile; fileRef = 61019F041F4344DC00AB15B6 /* Channel.m */; };
+		61019F081F45E1DE00AB15B6 /* NSObject+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 61019F071F45E1DE00AB15B6 /* NSObject+Extension.m */; };
 		616F60981F32D79600B753D7 /* NetworkTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 616F60971F32D79600B753D7 /* NetworkTools.m */; };
 		616F609B1F36E08700B753D7 /* News.m in Sources */ = {isa = PBXBuildFile; fileRef = 616F609A1F36E08700B753D7 /* News.m */; };
 		616F609F1F36FC5E00B753D7 /* NSArray+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = 616F609E1F36FC5E00B753D7 /* NSArray+Log.m */; };
@@ -27,6 +28,8 @@
 		61019F011F4344AE00AB15B6 /* topic_news.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = topic_news.json; sourceTree = "<group>"; };
 		61019F031F4344DC00AB15B6 /* Channel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Channel.h; sourceTree = "<group>"; };
 		61019F041F4344DC00AB15B6 /* Channel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Channel.m; sourceTree = "<group>"; };
+		61019F061F45E1DE00AB15B6 /* NSObject+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Extension.h"; sourceTree = "<group>"; };
+		61019F071F45E1DE00AB15B6 /* NSObject+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Extension.m"; sourceTree = "<group>"; };
 		616F60961F32D79600B753D7 /* NetworkTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkTools.h; sourceTree = "<group>"; };
 		616F60971F32D79600B753D7 /* NetworkTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkTools.m; sourceTree = "<group>"; };
 		616F60991F36E08700B753D7 /* News.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = News.h; path = ../Tools/News.h; sourceTree = "<group>"; };
@@ -166,6 +169,8 @@
 				616F609C1F36FC4C00B753D7 /* Log */,
 				616F60961F32D79600B753D7 /* NetworkTools.h */,
 				616F60971F32D79600B753D7 /* NetworkTools.m */,
+				61019F061F45E1DE00AB15B6 /* NSObject+Extension.h */,
+				61019F071F45E1DE00AB15B6 /* NSObject+Extension.m */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -308,6 +313,7 @@
 			files = (
 				616F609B1F36E08700B753D7 /* News.m in Sources */,
 				616F60981F32D79600B753D7 /* NetworkTools.m in Sources */,
+				61019F081F45E1DE00AB15B6 /* NSObject+Extension.m in Sources */,
 				61928B9E1F31BE3A004AE4C6 /* NewsTableViewController.m in Sources */,
 				616F60A21F3DFAF700B753D7 /* NewsCell.m in Sources */,
 				616F609F1F36FC5E00B753D7 /* NSArray+Log.m in Sources */,

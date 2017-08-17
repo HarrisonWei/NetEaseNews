@@ -9,5 +9,6 @@
 #import <Foundation/Foundation.h>
 
 @interface Channel : NSObject
-
+@property (nonatomic,copy)NSString *tname;
+@property (nonatomic,copy)NSString *tid;
 @end
