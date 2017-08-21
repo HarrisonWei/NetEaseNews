@@ -10,29 +10,74 @@
 #import "Channel.h"
 @interface HomeViewController ()
 
+//数据数组
+@property (nonatomic,strong)NSArray *channelList;
+@property (weak, nonatomic) IBOutlet UIView *channelView;
+
 @end
 
 @implementation HomeViewController
-
+#pragma mark
+#pragma mark -懒加载
+- (NSArray *)channelList{
+    if (_channelList == nil) {
+        _channelList = [Channel channelList];
+    }
+    return _channelList;
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    NSLog(@"--------------------%@",[Channel channelList]);
+    [self setUpChannel];
 }
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)setUpChannel{
+    //取消scrollview的自动缩进
+//    self.automaticallyAdjustsScrollViewInsets = NO;
+    //遍历频道数组,添加label
+    for (Channel *channel in self.channelList) {
+        UILabel *channelLabel = [[UILabel alloc]init];
+        channelLabel.text = channel.tname;
+        [channelLabel sizeToFit];
+        [self.channelView addSubview:channelLabel];
+        
+        
+    }
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
