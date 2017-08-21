@@ -13,10 +13,21 @@
 #pragma mark
 #pragma mark -字典转模型
 + (instancetype)objectWithDict:(NSDictionary *)dict{
-    News *news = [[News alloc]init];
-    [news setValuesForKeysWithDictionary:dict];
-    
-    return news;
+    //封装的不好,局限性太大
+//    News *news = [[News alloc]init];
+//    [news setValuesForKeysWithDictionary:dict];
+//    
+//    return news;
+    id obj = [[self alloc]init];
+//    NSArray *propertis = [self loadPropertis];
+//    for (NSString *key in propertis) {
+//        //判断dict是否存在key
+//        if (dict[key] != nil) {
+//            [obj setValue:dict[key] forKey:key];
+//        }
+//    }
+    [obj setValuesForKeysWithDictionary:dict];
+    return obj;
 }
 - (void)setValue:(id)value forUndefinedKey:(NSString *)key{
     
