@@ -12,6 +12,7 @@
 		61019F081F45E1DE00AB15B6 /* NSObject+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 61019F071F45E1DE00AB15B6 /* NSObject+Extension.m */; };
 		613190941F4ADA8E00D50472 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 613190931F4ADA8E00D50472 /* HomeViewController.m */; };
 		613190961F4ADAA600D50472 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 613190951F4ADAA600D50472 /* Home.storyboard */; };
+		613190991F4C3B5C00D50472 /* ChannelLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 613190981F4C3B5C00D50472 /* ChannelLabel.m */; };
 		616F60981F32D79600B753D7 /* NetworkTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 616F60971F32D79600B753D7 /* NetworkTools.m */; };
 		616F609B1F36E08700B753D7 /* News.m in Sources */ = {isa = PBXBuildFile; fileRef = 616F609A1F36E08700B753D7 /* News.m */; };
 		616F609F1F36FC5E00B753D7 /* NSArray+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = 616F609E1F36FC5E00B753D7 /* NSArray+Log.m */; };
@@ -35,6 +36,8 @@
 		613190921F4ADA8E00D50472 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		613190931F4ADA8E00D50472 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		613190951F4ADAA600D50472 /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		613190971F4C3B5C00D50472 /* ChannelLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChannelLabel.h; sourceTree = "<group>"; };
+		613190981F4C3B5C00D50472 /* ChannelLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChannelLabel.m; sourceTree = "<group>"; };
 		616F60961F32D79600B753D7 /* NetworkTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkTools.h; sourceTree = "<group>"; };
 		616F60971F32D79600B753D7 /* NetworkTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkTools.m; sourceTree = "<group>"; };
 		616F60991F36E08700B753D7 /* News.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = News.h; path = ../Tools/News.h; sourceTree = "<group>"; };
@@ -94,6 +97,8 @@
 				61019F011F4344AE00AB15B6 /* topic_news.json */,
 				61019F031F4344DC00AB15B6 /* Channel.h */,
 				61019F041F4344DC00AB15B6 /* Channel.m */,
+				613190971F4C3B5C00D50472 /* ChannelLabel.h */,
+				613190981F4C3B5C00D50472 /* ChannelLabel.m */,
 			);
 			path = Channel;
 			sourceTree = "<group>";
@@ -324,6 +329,7 @@
 				616F60981F32D79600B753D7 /* NetworkTools.m in Sources */,
 				61019F081F45E1DE00AB15B6 /* NSObject+Extension.m in Sources */,
 				613190941F4ADA8E00D50472 /* HomeViewController.m in Sources */,
+				613190991F4C3B5C00D50472 /* ChannelLabel.m in Sources */,
 				61928B9E1F31BE3A004AE4C6 /* NewsTableViewController.m in Sources */,
 				616F60A21F3DFAF700B753D7 /* NewsCell.m in Sources */,
 				616F609F1F36FC5E00B753D7 /* NSArray+Log.m in Sources */,
@@ -442,7 +448,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 69356RS9K8;
 				INFOPLIST_FILE = "网易新闻/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.itcast.----";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -456,7 +462,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 69356RS9K8;
 				INFOPLIST_FILE = "网易新闻/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.itcast.----";
 				PRODUCT_NAME = "$(TARGET_NAME)";

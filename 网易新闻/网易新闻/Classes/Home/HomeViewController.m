@@ -7,12 +7,17 @@
 //
 
 #import "HomeViewController.h"
+
 #import "Channel.h"
+
+#import "ChannelLabel.h"
 @interface HomeViewController ()
 
 //数据数组
 @property (nonatomic,strong)NSArray *channelList;
-@property (weak, nonatomic) IBOutlet UIView *channelView;
+@property (weak, nonatomic) IBOutlet UIScrollView *channelView;
+
+
 
 @end
 
@@ -30,17 +35,31 @@
     [self setUpChannel];
 }
 - (void)setUpChannel{
+    CGFloat margin = 8.0;
+    CGFloat x = margin;
+    CGFloat h = self.channelView.bounds.size.height;
+    
+    NSLog(@"================%.f",h);
+    
+    
     //取消scrollview的自动缩进
-//    self.automaticallyAdjustsScrollViewInsets = NO;
+    self.automaticallyAdjustsScrollViewInsets = NO;
     //遍历频道数组,添加label
     for (Channel *channel in self.channelList) {
-        UILabel *channelLabel = [[UILabel alloc]init];
-        channelLabel.text = channel.tname;
-        [channelLabel sizeToFit];
-        [self.channelView addSubview:channelLabel];
+        //已经计算好了width
+        ChannelLabel *l = [ChannelLabel channelLabelWithTitle:channel.tname];
         
-        
+        //设置label的frame
+        l.frame = CGRectMake(x, 0, l.bounds.size.width, h);
+//        //递增x
+        x += l.bounds.size.width;
+//
+        [self.channelView addSubview:l];
+
     }
+    
+    //设置contentSize
+    self.channelView.contentSize = CGSizeMake(x + margin, h);
 }
 
 @end
