@@ -47,7 +47,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="jnd-l2-ggh">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ChannelCell" id="jnd-l2-ggh">
                                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -56,6 +56,10 @@
                                         </view>
                                     </collectionViewCell>
                                 </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="bwU-aI-Fht" id="wsX-iK-isW"/>
+                                    <outlet property="delegate" destination="bwU-aI-Fht" id="qC0-bq-c8E"/>
+                                </connections>
                             </collectionView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -72,6 +76,8 @@
                     <navigationItem key="navigationItem" title="网易新闻" id="hZQ-Na-HI4"/>
                     <connections>
                         <outlet property="channelView" destination="LYW-wn-EwP" id="vvH-Be-xYD"/>
+                        <outlet property="collectionView" destination="YIb-xH-5vk" id="7NU-k5-7JQ"/>
+                        <outlet property="layout" destination="NQX-fz-mXO" id="xzM-kZ-Uzg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jca-th-MRk" userLabel="First Responder" sceneMemberID="firstResponder"/>
