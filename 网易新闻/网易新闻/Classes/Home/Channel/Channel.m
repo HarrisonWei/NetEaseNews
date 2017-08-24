@@ -9,6 +9,15 @@
 #import "Channel.h"
 #import "NSObject+Extension.h"
 @implementation Channel
+
+- (void)setTid:(NSString *)tid{
+    _tid = tid.copy;
+    _urlString = [NSString stringWithFormat:@"%@/0-40.html",_tid];
+}
+
+
+
+
 //加载所有频道的数组
 + (NSArray *)channelList{
     //1.加载json的二进制数据

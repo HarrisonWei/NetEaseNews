@@ -16,6 +16,14 @@
 @end
 
 @implementation ChannelCell
+
+- (void)setUrlString:(NSString *)urlString{
+    _urlString = urlString;
+    //设置控制器的URL
+    self.newsVC.urlString = urlString;
+}
+
+
 //加载xib/sb时,一加载就会执行
 - (void)awakeFromNib{
     [super awakeFromNib];

@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface ChannelCell : UICollectionViewCell
-
+@property (nonatomic,strong)NSString *urlString;
 @end

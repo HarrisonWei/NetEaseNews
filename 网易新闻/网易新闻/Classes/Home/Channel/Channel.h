@@ -12,6 +12,7 @@
 @property (nonatomic,copy)NSString *tname;
 @property (nonatomic,copy)NSString *tid;
 
+@property (nonatomic,strong,readonly)NSString *urlString;
 //加载所有频道的数组
 + (NSArray *)channelList;
 @end

@@ -14,6 +14,21 @@
 @end
 
 @implementation NewsTableViewController
+
+- (void)setUrlString:(NSString *)urlString{
+    _urlString = urlString;
+    //测试加载新闻
+    //为了避免循环引用
+    __weak typeof(self) weakSelf = self;
+    
+    [News loadNewsListWithURLString:urlString finished:^(NSArray *newsList) {
+        
+        weakSelf.newsList = newsList;
+        
+    }];
+}
+
+
 //重写set方法
 - (void)setNewsList:(NSArray *)newsList{
     _newsList = newsList;
@@ -33,15 +48,7 @@
     self.tableView.rowHeight = UITableViewAutomaticDimension;
     
     
-    //测试加载新闻
-    //为了避免循环引用
-    __weak typeof(self) weakSelf = self;
     
-    [News loadNewsListWithURLString:@"T1348648517839/0-20.html" finished:^(NSArray *newsList) {
-        
-        weakSelf.newsList = newsList;
-        
-    }];
 }
 
 - (void)didReceiveMemoryWarning {

@@ -10,4 +10,5 @@
 
 @interface NewsTableViewController : UITableViewController
 
+@property (nonatomic,strong)NSString *urlString;
 @end
