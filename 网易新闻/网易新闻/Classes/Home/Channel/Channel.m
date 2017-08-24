@@ -38,7 +38,9 @@
         
         [nmArray addObject:[self objectWithDict:obj]];
     }
-    return nmArray.copy;
+    return [nmArray sortedArrayUsingComparator:^NSComparisonResult(Channel *obj1, Channel *obj2) {
+        return [obj1.tid compare:obj2.tid];
+    }];
 }
 #pragma mark
 #pragma mark - description方法不要抽取,放到各自类中,写不好会死循环
