@@ -11,6 +11,7 @@
 #import "Channel.h"
 
 #import "ChannelLabel.h"
+#import "ChannelCell.h"
 @interface HomeViewController ()<UICollectionViewDelegate,UICollectionViewDataSource>
 
 //数据数组
@@ -92,7 +93,7 @@
     return self.channelList.count;
 }
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
-    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"ChannelCell" forIndexPath:indexPath];
+    ChannelCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"ChannelCell" forIndexPath:indexPath];
     cell.backgroundColor = [UIColor colorWithRed:((float)arc4random_uniform(256)/255.0) green:((float)arc4random_uniform(256)/255.0) blue:((float)arc4random_uniform(256)/255.0) alpha:1.0];
     
     return cell;
