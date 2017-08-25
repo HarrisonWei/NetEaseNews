@@ -10,4 +10,13 @@
 
 @interface ChannelLabel : UILabel
 + (instancetype)channelLabelWithTitle:(NSString *)title;
+/*
+ 从0-1
+ 0: 14号字
+ 1: 18号字
+ 
+ */
+
+@property (nonatomic,assign)float scale;
+
 @end

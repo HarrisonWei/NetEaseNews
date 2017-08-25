@@ -27,5 +27,24 @@
     
     return l;
 }
-
+- (void)setScale:(float)scale{
+    
+    _scale = scale;
+    float percent = (CWSelectedFontSize - CWNormalFontSize)/CWNormalFontSize;
+    //scale = 0  percent = 1;
+    //scale = 1  percent = 18/14 = (18 -14)/14 + 1 = 4/14 + 1;
+    percent = percent * scale + 1;
+    
+    //通过transform设置大小
+    self.transform = CGAffineTransformMakeScale(percent, percent);
+    //设置颜色
+    self.textColor = [UIColor colorWithRed:scale green:0 blue:0 alpha:1.0];
+}
 @end
+
+
+
+
+
+
+

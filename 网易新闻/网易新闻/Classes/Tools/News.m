@@ -23,10 +23,10 @@
     NSAssert(finished != nil, @"传入必须完成回调");
     
     [[NetworkTools sharedNetworkTools]GET:urlString parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, NSDictionary *responseObject) {
-        NSLog(@"%@",responseObject.keyEnumerator.nextObject);
+//        NSLog(@"%@",responseObject.keyEnumerator.nextObject);
         //根据key拿到第一个数组
         NSArray *array = responseObject[responseObject.keyEnumerator.nextObject];
-        NSLog(@"%@",array);
+//        NSLog(@"%@",array);
         //字典转模型
         //Capacity:容量  假设是10 这种创建数组的方式就会一次性分配10 存储空间
         //当添加第11个元素的时候,又会开辟10个存储空间

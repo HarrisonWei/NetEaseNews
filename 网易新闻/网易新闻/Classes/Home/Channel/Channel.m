@@ -38,7 +38,9 @@
         
         [nmArray addObject:[self objectWithDict:obj]];
     }
+    //频道数据排序,根据tid的大小
     return [nmArray sortedArrayUsingComparator:^NSComparisonResult(Channel *obj1, Channel *obj2) {
+//        升序:1compare2   降序:2compare1
         return [obj1.tid compare:obj2.tid];
     }];
 }

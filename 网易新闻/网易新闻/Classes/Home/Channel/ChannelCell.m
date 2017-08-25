@@ -11,7 +11,7 @@
 
 @interface ChannelCell ()
 
-@property (nonatomic,strong)NewsTableViewController *newsVC;
+
 
 @end
 
