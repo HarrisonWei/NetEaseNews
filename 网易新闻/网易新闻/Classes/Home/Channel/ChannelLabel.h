@@ -7,6 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+@class ChannelLabel;
+@protocol ChannelLabelDelegate <NSObject>
+//代理方法
+- (void)channelLabelDidSelected:(ChannelLabel *)label;
+
+@end
 
 @interface ChannelLabel : UILabel
 + (instancetype)channelLabelWithTitle:(NSString *)title;
@@ -18,5 +24,7 @@
  */
 
 @property (nonatomic,assign)float scale;
+
+@property (nonatomic,weak) id <ChannelLabelDelegate>delegate;
 
 @end

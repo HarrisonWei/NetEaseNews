@@ -12,7 +12,7 @@
 
 #import "ChannelLabel.h"
 #import "ChannelCell.h"
-@interface HomeViewController ()<UICollectionViewDelegate,UICollectionViewDataSource>
+@interface HomeViewController ()<UICollectionViewDelegate,UICollectionViewDataSource,ChannelLabelDelegate>
 
 //数据数组
 @property (nonatomic,strong)NSArray *channelList;
@@ -46,6 +46,9 @@
     
     //取消scrollview的自动缩进
     self.automaticallyAdjustsScrollViewInsets = NO;
+    
+    NSInteger index = 0;
+    
     //遍历频道数组,添加label
     for (Channel *channel in self.channelList) {
         //已经计算好了width
@@ -57,7 +60,10 @@
         x += l.bounds.size.width;
 //
         [self.channelView addSubview:l];
-
+        //设置代理对象
+        l.delegate = self;
+        //设置tag值--给所有的label设置一个tag值,即一个小标签
+        l.tag = index++;
     }
     
     //设置contentSize
@@ -102,14 +108,9 @@
     nextLabel.scale = nextScale;
     
     NSLog(@"%f  %f",currentScale,nextScale);
-    
-    
-    
-    
-    
-    
-    
-    
+    //强制更新索引
+    self.currentIndex = self.collectionView.contentOffset.x/self.collectionView.bounds.size.width;
+  
 }
 
 //停止滚动的代理方法
@@ -119,7 +120,17 @@
 }
 
 
-
+#pragma mark
+#pragma mark -实现label的代理方法
+- (void)channelLabelDidSelected:(ChannelLabel *)label{
+    NSLog(@"%@",label);
+    self.currentIndex = label.tag;
+    //滚动到指定位置
+    NSIndexPath *indexPath = [NSIndexPath indexPathForItem:self.currentIndex inSection:0];
+    [self.collectionView scrollToItemAtIndexPath:indexPath atScrollPosition:UICollectionViewScrollPositionCenteredHorizontally animated:NO];
+    
+    
+}
 
 
 

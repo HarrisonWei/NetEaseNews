@@ -16,6 +16,9 @@
 @implementation NewsTableViewController
 
 - (void)setUrlString:(NSString *)urlString{
+    self.newsList = nil;
+    
+    
     _urlString = urlString;
     //测试加载新闻
     //为了避免循环引用

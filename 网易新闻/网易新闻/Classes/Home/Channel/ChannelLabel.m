@@ -24,9 +24,26 @@
     [l sizeToFit];
     //4.设置小字体
     l.font = [UIFont systemFontOfSize:CWNormalFontSize];
+    //设置用户交互
+    l.userInteractionEnabled = YES;
     
     return l;
 }
+#pragma mark
+#pragma mark -点击label
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+    NSLog(@"%s",__func__);
+    //实现代理方法
+    if ([self.delegate respondsToSelector:@selector(channelLabelDidSelected:)]) {
+        [self.delegate channelLabelDidSelected:self];
+    }
+    
+    
+}
+
+
+
+
 - (void)setScale:(float)scale{
     
     _scale = scale;

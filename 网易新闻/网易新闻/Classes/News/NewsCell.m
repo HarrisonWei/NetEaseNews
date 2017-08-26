@@ -31,6 +31,9 @@
     self.sourceLabel.text = news.source;
     self.replyLabel.text = [NSString stringWithFormat:@"%d跟帖",news.replyCount];
     //图像 - AFN的图像不支持GIF,绝大多数还是应该用SDWebImage
+    //异步设置图像之前要清空图像
+    self.iconView.image = nil;
+    
     [self.iconView setImageWithURL:[NSURL URLWithString:news.imgsrc]];
     //判断是否有多图,给两个imageView设置图像
     if (news.imgextra.count == 2) {
@@ -39,6 +42,8 @@
             //数组中存放的字典,取出来的地址字符串
             NSString *urlString = news.imgextra[index][@"imgsrc"];
             NSURL *url = [NSURL URLWithString:urlString];
+            //设置图像之前清空图像
+            iv.image = nil;
             //设置图像
             [iv setImageWithURL:url];
             index++;
